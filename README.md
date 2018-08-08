@@ -1,2 +1,2 @@
 # HANGMAN-Game
-A simple Hangman
+A simple Hangman game using Pyhton
