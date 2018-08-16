@@ -1526,7 +1526,7 @@ words=['people',
     'yesterday',
 ]
 
-number=randint(0,3)
+number=randint(0,1526)
 word=words[number]
 w=list(word)
 l=len(word)
@@ -1544,17 +1544,18 @@ while guess>0:
             break
         else:
           print("WRONG ANSWER")    
+          print("You have",guess," chances left")
     else:
         print("Take some guesses")  
         i=input("Enter your guess")
         for j in range(l):
           if i==w[j] and x[j]=='*':
-            #print(i,end=" ")
             x[j]=i
             break
         for k in x:
           print(k,end=" ")
         print(" ",)  
+        print("You have",guess," chances left")
 if guess==0:
-print("YOU ARE OUT OF CHANCES...GAME OVER!!")
-print(word)
+  print("YOU ARE OUT OF CHANCES...GAME OVER!!")
+  print(word)
