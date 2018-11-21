@@ -1,3 +1,4 @@
+
 from random import randint
 
 words=['people',
@@ -1536,11 +1537,12 @@ print("You have",guess,"chances")
 x=['*']*l
 while guess>0:
     guess=guess-1
-    y=int(input("1-Guess word 2-Guess alphabet"))
+    y=int(input("1-Guess word 2-Guess alphabet"))a
     if(y==1):
         pp=input("Enter your word")
         if pp==word:
             print("YOU WON")
+            exit()
             break
         else:
           print("WRONG ANSWER")    
@@ -1551,6 +1553,11 @@ while guess>0:
         for j in range(l):
           if i==w[j] and x[j]=='*':
             x[j]=i
+            guess=guess+1
+            if x==w:
+              print(word)
+              print("YOU WON")
+              exit()
             break
         for k in x:
           print(k,end=" ")
@@ -1558,4 +1565,4 @@ while guess>0:
         print("You have",guess," chances left")
 if guess==0:
   print("YOU ARE OUT OF CHANCES...GAME OVER!!")
-  print(word)
+  print("The Correct answer is",word)
